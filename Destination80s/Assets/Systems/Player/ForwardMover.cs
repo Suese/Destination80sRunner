@@ -6,6 +6,8 @@ using UnityEngine;
 public class ForwardMover : MonoBehaviour {
 
 	public float speed = 1f;
+	public AnimationCurve ramp;
+
 	Rigidbody body;
 
 	void Start () {
@@ -13,7 +15,8 @@ public class ForwardMover : MonoBehaviour {
 
 	}
 	void FixedUpdate(){
-		body.AddForce( Vector3.forward * speed,ForceMode.Force );
+		
+		body.AddForce( Vector3.forward * speed * ramp.Evaluate(Time.time),ForceMode.Force );
 	}
 
 	
