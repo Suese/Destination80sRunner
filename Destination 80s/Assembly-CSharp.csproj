@@ -46,21 +46,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Attacher.cs" />
-     <Compile Include="Assets\Crasher.cs" />
-     <Compile Include="Assets\ForwardMover.cs" />
-     <Compile Include="Assets\Game.cs" />
-     <Compile Include="Assets\Jumper.cs" />
-     <Compile Include="Assets\LeftRightController.cs" />
-     <Compile Include="Assets\LevelEnd.cs" />
-     <Compile Include="Assets\ShowOnlyAttribute.cs" />
-     <Compile Include="Assets\Tilter.cs" />
-     <Compile Include="Assets\Trigger.cs" />
-     <None Include="Assets\UCLAGameLab\Wireframe\Shaders\UCLA GameLab Wireframe Functions.cginc" />
-     <None Include="Assets\UCLAGameLab\Wireframe\Shaders\UCLA GameLab Wireframe.shader" />
-     <None Include="Assets\UCLAGameLab\Wireframe\Shaders\UCLA GameLab Cutout Wireframe.shader" />
-     <None Include="Assets\UCLAGameLab\Wireframe\Shaders\UCLA GameLab Double-Sided Wireframe.shader" />
-     <None Include="Assets\UCLAGameLab\Wireframe\Shaders\UCLA GameLab Double-Sided Cutout Wireframe.shader" />
+     <Compile Include="Assets\Systems\Attacher.cs" />
+     <Compile Include="Assets\Systems\Game\Game.cs" />
+     <Compile Include="Assets\Systems\Game\LevelEnd.cs" />
+     <Compile Include="Assets\Systems\Player\Crasher.cs" />
+     <Compile Include="Assets\Systems\Player\ForwardMover.cs" />
+     <Compile Include="Assets\Systems\Player\Jumper.cs" />
+     <Compile Include="Assets\Systems\Player\LeftRightController.cs" />
+     <Compile Include="Assets\Systems\Tilter.cs" />
+     <Compile Include="Assets\Systems\Trigger.cs" />
+     <None Include="Assets\Systems\3rdParty\UCLAGameLab\Wireframe\Shaders\UCLA GameLab Wireframe Functions.cginc" />
+     <None Include="Assets\Systems\3rdParty\UCLAGameLab\Wireframe\Shaders\UCLA GameLab Wireframe.shader" />
+     <None Include="Assets\Systems\3rdParty\UCLAGameLab\Wireframe\Shaders\UCLA GameLab Cutout Wireframe.shader" />
+     <None Include="Assets\Systems\3rdParty\UCLAGameLab\Wireframe\Shaders\UCLA GameLab Double-Sided Wireframe.shader" />
+     <None Include="Assets\Systems\3rdParty\UCLAGameLab\Wireframe\Shaders\UCLA GameLab Double-Sided Cutout Wireframe.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
