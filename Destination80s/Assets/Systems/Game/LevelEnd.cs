@@ -11,7 +11,7 @@ public class LevelEnd : MonoBehaviour {
 		trigger.onTriggerEnter.AddListener( OnTriggerEnter );
 	}
 	void OnTriggerEnter(){
-//		Game.Instance.DoWin();
+		Game.Instance.DoWin();
 	}
 	
 }

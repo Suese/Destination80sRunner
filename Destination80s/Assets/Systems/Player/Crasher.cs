@@ -20,5 +20,6 @@ public class Crasher : MonoBehaviour {
 		if( destroyMe ){
 			gameObject.SetActive( false );
 		}
+		Game.Instance.DoLose();
 	}
 }
