@@ -17,6 +17,7 @@ public class LevelSelector : MonoBehaviour {
 	public float delayAfterSelect = 3;
 	public float verticalDistance = 3;
 	public int selectionID = 0;
+	public AudioSource selectSound;
 
 	Vector3 startPosition;
 	void Start(){
@@ -69,6 +70,7 @@ public class LevelSelector : MonoBehaviour {
 	}
 
 	IEnumerator SelectLevel(int selectionID ){
+		selectSound.Play();
 		itemSelected = true;
 		float endTime = Time.time + delayAfterSelect;
 		LevelReference level = levels[selectionID];
