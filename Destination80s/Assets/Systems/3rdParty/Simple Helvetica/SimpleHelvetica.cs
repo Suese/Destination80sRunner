@@ -2,7 +2,9 @@
 //email: info@pepwuper.com
 //version 1.0
 
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 using UnityEngine;
 using System.Collections;
 

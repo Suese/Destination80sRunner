@@ -18,6 +18,7 @@ public class LevelSelector : MonoBehaviour {
 	public float verticalDistance = 3;
 	public int selectionID = 0;
 	public AudioSource selectSound;
+	public AudioSource changeSelectionSound;
 
 	Vector3 startPosition;
 	void Start(){
@@ -25,6 +26,7 @@ public class LevelSelector : MonoBehaviour {
 	}
 	bool itemSelected = false;
 
+	public float y = 0;
 	bool holdingDown = false;
 	bool holdingUp = false;
 	void Update () {
@@ -34,9 +36,10 @@ public class LevelSelector : MonoBehaviour {
 		float vertical = Input.GetAxis( axisName );
 		bool up = false;
 		bool down = false;
-		if( vertical > 0.1f ){
+		y = vertical;
+		if( vertical > 0.5f ){
 			up = true;
-		} else if( vertical < -0.1f ){
+		} else if( vertical < -0.5f ){
 			down = true;
 		}
 
@@ -49,6 +52,7 @@ public class LevelSelector : MonoBehaviour {
 
 		if( up && !holdingUp){
 			selectionID--;
+			changeSelectionSound.Play();
 			if( selectionID < 0 ){
 				selectionID = levels.Length - 1;
 			}
@@ -56,6 +60,7 @@ public class LevelSelector : MonoBehaviour {
 		}
 		if( down && !holdingDown ){
 			selectionID++;
+			changeSelectionSound.Play();
 			if( selectionID >= levels.Length ){
 				selectionID = 0;
 			}
